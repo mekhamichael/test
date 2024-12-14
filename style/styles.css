@@ -1,0 +1,417 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+}
+
+
+.img-fluid{
+    
+    height: 160px !important ;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    height: 35vh;
+    background:-webkit-linear-gradient(left,#c32f27,#d8572a,#db7c26,#f7b538,#780116);
+}
+
+.head-icons  {
+    font-size: 1.2rem;
+text-align: center;}
+.head-icons a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #3e260d;
+    font-size: 1.4rem;
+
+}
+.head-icons a i{
+ transition: 0.5s;
+
+}
+i:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 576px) {
+    .menu-section {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.head-h{
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+  
+  .box.show {
+    opacity: 1;
+    transform: translateY(0); /* الانتقال إلى الموقع الأصلي */
+  }
+
+/* //////////////////////////////////////////////////////////////// */
+.image-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.img:hover{
+    transform: scale(1.05);
+
+}
+.image-container img {
+    width: 100%;
+    height: 150px;
+    transition: transform 0.3s ease;
+    border-radius: 8px 20px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    width:90%;
+    height: fit-content;
+    top: 60%;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  0.3s ;
+    margin: auto;
+    border-radius: 8px 20px;
+
+
+}
+
+
+
+.text {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    background:-webkit-linear-gradient(left,#c32f27,#d8572a,#db7c26,#f7b538,#780116);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+.scale-in-center {
+    opacity: 0;
+    transform: scale(0); /* يبدأ بحجم صغير من المنتصف */
+    animation: scaleIn 0.3s forwards; /* مدة الحركة 1 ثانية */
+  }
+  
+  /* Keyframes لتأثير التكبير */
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0); /* تبدأ بحجم 0 */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* تصل إلى حجمها الطبيعي */
+    }
+  }
+/* حركة الديفات من اليمين */
+.slide-in-right {
+    opacity: 0;
+    animation: slideRight 0.3s forwards;
+  }
+  
+  /* حركة الديفات من اليسار */
+  .slide-in-left {
+    opacity: 0;
+    animation: slideLeft 0.3s forwards;
+  }
+  
+  /* Keyframes لحركة الانزلاق من اليمين */
+  @keyframes slideRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes لحركة الانزلاق من اليسار */
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* ///////////////////////////////// item css /////////////////////////////////// */
+/* حاوية الصفحة */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق العنوان وزر الرجوع */
+.d-flex.align-items-center.mb-3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.d-flex.align-items-center.mb-3 h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin: auto;
+    background:-webkit-linear-gradient(left,#03071e,#370617,#dc2f02,#e85d04,#f48c06,#ffba08,#6a040f,#9d0208,#d00000);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+
+.d-flex.align-items-center.mb-3 button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* البطاقة */
+.card-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px 30px ;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* النصوص داخل البطاقة */
+.card-item .flex-grow-1 {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.card-item h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.card-item p {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.card-item button {
+    border: 1px solid #000;
+    color: #000;
+    background-color: transparent;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    border-radius: 4px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-item button:hover {
+    background-color: #140e0e;
+    color: #f0e9e9;
+}
+
+/* الصورة */
+.card-item img {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px 20px;
+    object-fit: cover;
+}
+/* //////////////////////////////////////// menu ////////////////////////////////////////////// */
+/* تنسيق زر القائمة */
+.menu-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #1a1a40, #3d3d6b);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    z-index: 1010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.menu-button::before {
+    content: "🍴";
+    font-size: 18px;
+}
+
+.menu-button:hover {
+    background: linear-gradient(45deg, #3d3d6b, #1a1a40);
+}
+.menu-button.hidden {
+    display: none;
+}
+/* القائمة الجانبية */
+.side-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 70%;
+    background-color: #1a1a40;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px 15px 0 0;
+    z-index: 1000;
+    padding: 20px 0px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* يضيف التمرير */
+
+}
+
+.side-menu.active {
+    transform: translateY(0);
+}
+
+.side-menu-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-button {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: #3d3d6b;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px; /* المسافة من الأعلى */
+    left: 10px; /* جعل الزر أقرب لليسار */
+    z-index: 1020;
+    margin:0 15px 0 0;
+}
+.close-button:active{
+    opacity: 0;
+}
+/* تنسيق قائمة الروابط */
+.side-menu-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: -20px;
+    
+}
+.side-menu-lis {
+    display: flex; /* جعل القائمة أفقية */
+    flex-wrap: wrap; /* السماح بالانتقال لصف جديد إذا زاد العرض */
+    justify-content: center; /* توسيط الأزرار أفقياً */
+    gap: 15px; /* مسافة بين الأزرار */
+    padding: 10px;
+    margin: 0;
+    list-style: none; /* إزالة النقاط من القائمة */
+}
+/* تنسيق خاص لزر HOME */
+.side-menu-list .home-item {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    text-align: center;
+    position: relative;
+    padding-left: 10px;
+}
+
+.home-item{
+    flex: 0 0 calc(33.333% - 10px); /* ثلاثة أزرار في الصف الواحد */
+    height: 100px;
+    width: 100px;
+    background-color: #3d3d6b;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+margin-bottom: 30px;   
+ margin-left: 20px;
+
+}
+.home-item span {
+    font-size: 30px; /* تكبير الأيقونة */
+    /* text-align: center; */
+}
+.home-item:hover {
+    background-color: #52527e; /* لون مختلف عند التمرير */
+}
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.menu-link:active {
+    background-color: #3d3d6b;
+}
+
+/* خط أفقي تحت العناصر الأخرى */
+.side-menu-list li:not(.home-item)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 90%;
+    background-color: #3d3d6b;
+    margin: 5px 0 0 10px;
+}
